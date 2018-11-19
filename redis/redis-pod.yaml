@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-master
+  labels:
+    name: redis-master
+# 可以定义多个容器
+spec:
+ containers:
+   - name: master
+     image: kubeguide/redis-master
+     env:
+     - name: GET_HOSTS_FROM
+       value: env
+     ports:
+     - containerPort: 6379
