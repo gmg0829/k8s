@@ -14,9 +14,11 @@ spec:
         name: hello
     spec:
       containers:
-      - image: hello:0.0.1
+      - image: registry.cn-hangzhou.aliyuncs.com/gmg/hello:0.0.1
         name: hello
         ports:
         - containerPort: 8080
-        resources: {}
-      nodeName: node1
+      imagePullSecrets:
+        - name: regsecret
+# nodeName: node1
+# nodeName 指定在node1
