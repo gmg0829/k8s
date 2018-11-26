@@ -5,6 +5,7 @@ metadata:
     name: hello
   name: hello
 spec:
+  type: NodePort
   ports:
   - port: 8080
 #    protocol: TCP
@@ -12,7 +13,6 @@ spec:
     nodePort: 30008
   selector:
     name: hello
-  type: NodePort
 
   # NodePort 表示Node上的物理机端口提供对外的访问的能力。 nodePort对外访问的端口
 
